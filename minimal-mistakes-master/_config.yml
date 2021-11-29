@@ -16,17 +16,17 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "쓰라려서 쓴 잡념"
-title_separator          : "&#124"
+title                    : "ΑΒΡΑΞΑΣ"
+title_separator          : "-"
 subtitle                 : "2022에는 다르게"
 name                     : "김동주"
-description              : "소중한 이야기들을 담는 곳입니다."
-url                      : 
+description              : "Description : It's all New with tags"
+url                      : "https://eastcolumn.github.io"
 baseurl                  : 
-repository               : "eastcolumn/Eastcolumn.github.com"
+repository               : "https://github.com/eastcolumn/eastcolumn.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : 
+masthead_title           : "배고파요"
 breadcrumbs              : true
 words_per_minute         : 200
 comments:
