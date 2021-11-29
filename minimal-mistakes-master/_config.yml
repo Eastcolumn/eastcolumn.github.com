@@ -11,7 +11,7 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -23,10 +23,10 @@ name                     : "김동주"
 description              : "Description : It's all New with tags"
 url                      : "https://eastcolumn.github.io"
 baseurl                  : 
-repository               : "https://github.com/eastcolumn/eastcolumn.github.io"
+repository               : "Eastcolumn/eastcolumn.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "배고파요"
+masthead_title           : "ΑΒΡΑΞΑΣ"
 breadcrumbs              : true
 words_per_minute         : 200
 comments:
@@ -214,6 +214,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jemoji
   - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
