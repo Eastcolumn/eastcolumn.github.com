@@ -129,7 +129,8 @@ result.ifPresent(m->{throw new IllegalException("이미 존재");});
 //when
 //then
 주석 깔아주기
-
+@Transactional 을 이용해서
+반복테스트 가능하다 -> DB에서 작업하고 rollback을 하기 때문에 commit 이 안되서 다음 테스트 케이스에 영향을 주지 않는다.
 
 
 
@@ -170,6 +171,7 @@ SpringConfig 파일을 생성해서
 @Bean으로 선언하면된다.
 
 교체가 편하다!!!
+컴포넌트 스캔은 DB 변경 같은거 하면 다 바꿔줘야함...
 
 
 3. Xml도 되기는한다..
@@ -192,3 +194,45 @@ public class SpringConfig{
 (같은 것은 하나만 등록해서 공유한다!)
 따라서 같은 스프링 빈이면 모두 같은 인스턴스이다.
 물론 설정으로 싱글톤이 아니게 할 수 있기도하다
+
+DB 변경하는거는
+SOLID의 OCP 개방 폐쇄 원칙
+확장에는 열려있고 수정에는 닫혀있다.
+기존 코드 수정 없이 교체 가능
+
+데이터 관리 하는 법
+1. JDBC
+제일 옛날 방법
+
+2. JdbcTemplate 실무에서 꽤 사용한다
+
+MyBatis 라이브러리랑 유사
+JDBC API에서 본 반복 코드를 대부분 제거해줌
+but SQL 직접 작성해야함
+
+3. JPA	
+최근 방법
+SQL문이 필요없음
+자동으로 처리해준다~
+
+데이터 중심 설계에서 객체 중심의 설계로 패러다임을 전환할 수 있다.
+개발 생산성이 크게 늘어난다.
+
+strategy=generationType.Identity
+자동 생성해주는부분
+
+EntityManager
+Jpa는 entitymanager로 다 관리됨
+db랑 통신하고 관리하고 다 해줌
+.persist() : 영구 저장하기
+.find() : 조회하기
+.createQuery() : 쿼리 생성해서 검색하기 -> 전체 검색 또는 findByName일 때
+
+CRUD 
+SQL짤 필요없음 
+찍어서 찾는거 pk기반 아닌거만 createQuery
+
+Jpa는 항상 @transaction이 있어야한다!
+
+
+
